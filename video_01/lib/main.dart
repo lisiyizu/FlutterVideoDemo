@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'model/post.dart';
-// import 'demo/ListView_demo.dart'; // 导入了没有使用的dart 也会报错
+// import 'model/post.dart';  // 导入了没有使用的dart 也会报错
+import './demo/Drawer_demo.dart'; 
 
 void main() => runApp(App());
 
@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow, // 主题色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
-        splashColor: Colors.white70,
+        splashColor: Colors.red,  // 水波纹颜色
       ),
     );
   }
@@ -27,12 +27,12 @@ class Home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          // leading 导航栏 左边按钮
-          leading: IconButton(  
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigration', // 描述
-            onPressed: () => debugPrint('Navigation button is pressed'),   // null 不可点击状态
-          ),
+          // // leading 导航栏 左边按钮
+          // leading: IconButton(  
+          //   icon: Icon(Icons.menu),
+          //   tooltip: 'Navigration', // 描述
+          //   onPressed: () => debugPrint('Navigation button is pressed'),   // null 不可点击状态
+          // ),
           title: Text('莫小言'),
           // actions 导航栏 右边按钮数组
           actions: <Widget>[
@@ -63,6 +63,10 @@ class Home extends StatelessWidget {
             Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
+        // 左侧抽屉
+        drawer: DrawerDemo(),
+        // 右侧抽屉
+        endDrawer: Text('This is end drawer'),
       ),
     );
   }
