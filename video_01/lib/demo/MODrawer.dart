@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DrawerDemo extends StatelessWidget {
+class MODrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

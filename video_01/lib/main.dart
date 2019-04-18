@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'model/post.dart';  // 导入了没有使用的dart 也会报错
-import './demo/Drawer_demo.dart'; 
+import './demo/MODrawer.dart'; 
+import './demo/MOListView.dart';
+import './demo/MOBottomNavBar.dart';
+import './demo/MOBasic.dart';
 
 void main() => runApp(App());
 
@@ -11,9 +14,9 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow, // 主题色
+        primarySwatch: Colors.purple, // 主题色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
-        splashColor: Colors.red,  // 水波纹颜色
+        splashColor: Colors.white,  // 水波纹颜色
       ),
     );
   }
@@ -58,15 +61,17 @@ class Home extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_florist, size: 128.0, color: Colors.black12),
+            MOListView(),
+            MOBasic(),
             Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
         // 左侧抽屉
-        drawer: DrawerDemo(),
+        drawer: MODrawer(),
         // 右侧抽屉
         endDrawer: Text('This is end drawer'),
+        bottomNavigationBar: MOBottomNavBar(),
       ),
     );
   }

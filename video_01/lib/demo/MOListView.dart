@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
 
-class ListViewDemo extends StatelessWidget {
+class MOListView extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
     return Container(
       color: Colors.white,
