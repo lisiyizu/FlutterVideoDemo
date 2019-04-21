@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
             MOListView(),
             MOBasic(),
             Icon(Icons.change_history, size: 128.0, color: Colors.black12),
-            Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+            // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
         // 左侧抽屉
