@@ -4,6 +4,7 @@ import './demo/MODrawer.dart';
 import './demo/MOListView.dart';
 import './demo/MOBottomNavBar.dart';
 import './demo/MOBasic.dart';
+import './demo/MOLayout.dart';
 
 void main() => runApp(App());
 
@@ -63,7 +64,8 @@ class Home extends StatelessWidget {
           children: <Widget>[
             MOListView(),
             MOBasic(),
-            Icon(Icons.change_history, size: 128.0, color: Colors.black12),
+            MOLayout(),
+            // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
