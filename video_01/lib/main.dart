@@ -5,6 +5,7 @@ import './demo/MOListView.dart';
 import './demo/MOBottomNavBar.dart';
 import './demo/MOBasic.dart';
 import './demo/MOLayout.dart';
+import './demo/MOView.dart';
 
 void main() => runApp(App());
 
@@ -27,7 +28,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -57,6 +58,7 @@ class Home extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.change_history)),
               Tab(icon: Icon(Icons.directions_bike)), 
+              Tab(icon: Icon(Icons.view_quilt)),
             ],
           ),
         ),
@@ -65,8 +67,7 @@ class Home extends StatelessWidget {
             MOListView(),
             MOBasic(),
             MOLayout(),
-            // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
-            // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+            MOView(),
           ],
         ),
         // 左侧抽屉
