@@ -5,7 +5,9 @@ import './demo/MOListView.dart';
 import './demo/MOBottomNavBar.dart';
 import './demo/MOBasic.dart';
 import './demo/MOLayout.dart';
-import './demo/MOView.dart';
+// import './demo/MOView.dart';
+import './demo/MOSliver.dart';
+import './demo/MONavigator.dart';
 
 void main() => runApp(App());
 
@@ -14,7 +16,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
-      home: Home(),
+      home: MONavigator(),
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
@@ -67,7 +69,8 @@ class Home extends StatelessWidget {
             MOListView(),
             MOBasic(),
             MOLayout(),
-            MOView(),
+            // MOView(),
+            SliverDemo(),
           ],
         ),
         // 左侧抽屉
