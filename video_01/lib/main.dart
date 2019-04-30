@@ -16,7 +16,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
-      home: MONavigator(),
+      // home: MONavigator(),
+      initialRoute: '/about',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About'),
+      },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
