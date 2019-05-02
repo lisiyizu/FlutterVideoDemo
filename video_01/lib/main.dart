@@ -8,6 +8,7 @@ import './demo/MOLayout.dart';
 // import './demo/MOView.dart';
 import './demo/MOSliver.dart';
 import './demo/MONavigator.dart';
+import './demo/form_demo.dart';
 
 void main() => runApp(App());
 
@@ -17,15 +18,17 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/about',
+      initialRoute: '/form',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
+        '/form': (context) => FormDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5), // 高亮颜色
         splashColor: Colors.white,  // 水波纹颜色
+        accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       ),
     );
   }
