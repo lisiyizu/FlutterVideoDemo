@@ -9,6 +9,7 @@ import './demo/MOLayout.dart';
 import './demo/MOSliver.dart';
 import './demo/MONavigator.dart';
 import './demo/form_demo.dart';
+import './demo/material_components.dart';
 
 void main() => runApp(App());
 
@@ -18,11 +19,12 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/form',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
