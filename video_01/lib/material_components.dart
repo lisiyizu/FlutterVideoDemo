@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import './button_demo.dart';
-import './floating_action_button.dart';
-import './popup_menu_button.dart';
-import './simple_dialog_demo.dart';
-import './alert_dialog_demo.dart';
-import './buttom_sheet_demo.dart';
-import './snack_bar_demo.dart';
-import './expansion_panel_demo.dart';
+import './buttonDemo/button_demo.dart';
+import './buttonDemo/floating_action_button.dart';
+import './buttonDemo/popup_menu_button.dart';
+import './buttonDemo/simple_dialog_demo.dart';
+import './buttonDemo/alert_dialog_demo.dart';
+import './buttonDemo/buttom_sheet_demo.dart';
+import './buttonDemo/snack_bar_demo.dart';
+import './buttonDemo/expansion_panel_demo.dart';
+import './buttonDemo/chip_demo.dart';
+import './table/data_table_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -18,6 +20,8 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'DataTableDemo', page: DataTableDemo()),
+          ListItem(title: 'ChipDemo', page: ChipDemo()),
           ListItem(title: 'ExpandionPanelDemo', page: ExpandionPanelDemo()),
           ListItem(title: 'SnackBarDemo', page: SnackBarDemo()),
           ListItem(title: 'ButtomSheetDemo', page: BottomSheetDemo()),

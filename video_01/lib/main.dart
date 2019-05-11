@@ -9,7 +9,7 @@ import './demo/MOLayout.dart';
 import './demo/MOSliver.dart';
 import './demo/MONavigator.dart';
 import './demo/form_demo.dart';
-import './buttonDemo/material_components.dart';
+import './material_components.dart';
 
 void main() => runApp(App());
 
