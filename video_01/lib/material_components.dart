@@ -9,6 +9,7 @@ import './buttonDemo/snack_bar_demo.dart';
 import './buttonDemo/expansion_panel_demo.dart';
 import './buttonDemo/chip_demo.dart';
 import './table/data_table_demo.dart';
+import './table/paginated_data_table_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -20,6 +21,7 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),
           ListItem(title: 'DataTableDemo', page: DataTableDemo()),
           ListItem(title: 'ChipDemo', page: ChipDemo()),
           ListItem(title: 'ExpandionPanelDemo', page: ExpandionPanelDemo()),

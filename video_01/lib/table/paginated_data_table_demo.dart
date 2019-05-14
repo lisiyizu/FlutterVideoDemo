@@ -1,27 +1,61 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
 
-class DataTableDemo extends StatefulWidget {
+class PaginatedDataTableDemo extends StatefulWidget {
   @override
-  _DataTableDemoState createState() => _DataTableDemoState();
+  _PaginatedDataTableDemoState createState() => _PaginatedDataTableDemoState();
 }
 
-class _DataTableDemoState extends State<DataTableDemo> {
+class PostDataSource extends DataTableSource {
+  final List<Post> _posts = posts;
+  int _selectedCount = 0;
+
+  @override
+  int get rowCount => _posts.length;
+
+  @override
+  bool get isRowCountApproximate => false;
+
+  @override
+  int get selectedRowCount => _selectedCount;
+
+  @override
+  DataRow getRow(int index) {
+    final Post post = _posts[index];
+
+    return DataRow.byIndex(
+      index: index,
+      cells: <DataCell>[
+        DataCell(Text(post.title)),
+        DataCell(Text(post.author)),
+        DataCell(Image.network(post.imageUrl)),
+      ],
+    );
+  }
+}
+
+
+class _PaginatedDataTableDemoState extends State<PaginatedDataTableDemo> {
   int _sortColumIndex;
   bool _sortAscending = true;
+
+  final PostDataSource _postDataSource = PostDataSource();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DataTableDemo'),
+        title: Text('PaginatedDataTableDemo'),
         elevation: 0.0,
       ),
       body: Container(
         padding: EdgeInsets.all(16.0),
         child: ListView(
           children: <Widget>[
-            DataTable(
+            PaginatedDataTable(
+              header: Text('Posts'),
+              rowsPerPage: 5, // 每页数量
+              source: _postDataSource,
               sortColumnIndex: _sortColumIndex, //  以哪一列排序
               sortAscending: _sortAscending,
               // onSelectAll: (bool value) {},
@@ -55,24 +89,6 @@ class _DataTableDemoState extends State<DataTableDemo> {
                   label: Text('Image'),
                 ),
               ],
-              rows: posts.map((post) {
-                  return DataRow(
-                    selected: post.selected,
-                    onSelectChanged: (bool value) {
-                      setState(() {
-                        if (post.selected != value) {
-                          post.selected = value;
-                        }
-                      });
-                    },
-                    cells: [
-                      DataCell(Text(post.title)),
-                      DataCell(Text(post.author)),
-                      DataCell(Image.network(post.imageUrl)),
-                    ]
-                  );
-                }
-              ).toList(),
             ),
           ],
         ),
