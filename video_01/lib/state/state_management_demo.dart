@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-// class StateManagemnetDemo extends StatefulWidget {
+// class StateManagementDemo extends StatefulWidget {
 //   @override
-//   _StateManagemnetDemoState createState() => _StateManagemnetDemoState();
+//   _StateManagementDemoState createState() => _StateManagementDemoState();
 // }
 
-class StateManagemnetDemo extends StatelessWidget {
+class StateManagementDemo extends StatelessWidget {
   // int _count = 0;
   // void _increaseCount() {
   //   setState(() {
@@ -24,7 +24,7 @@ class StateManagemnetDemo extends StatelessWidget {
       model: CounterModel(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('StateManagemnetDemo'),
+          title: Text('StateManagementDemo'),
           elevation: 0.0,
         ),
         body: CounterWrapper(),

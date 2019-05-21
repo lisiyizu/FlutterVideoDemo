@@ -24,7 +24,7 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ListItem(title: 'StateManagemnetDemo', page: StateManagemnetDemo()),
+          ListItem(title: 'StateManagemnetDemo', page: StateManagementDemo()),
           ListItem(title: 'StepperDemo', page: StepperDemo()),
           ListItem(title: 'CardDemo', page: CardDemo()),
           ListItem(title: 'PaginatedDataTableDemo', page: PaginatedDataTableDemo()),

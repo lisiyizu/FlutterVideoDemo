@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../model/post.dart';
 
 class StepperDemo extends StatefulWidget {
   @override
