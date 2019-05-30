@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/post.dart';
+import 'package:video_01/model/post.dart';
 
 class DataTableDemo extends StatefulWidget {
   @override

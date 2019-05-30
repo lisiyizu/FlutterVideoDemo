@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/post.dart';
+import 'package:video_01/model/post.dart';
 import 'post_show.dart';
 
 class MOListView extends StatelessWidget {

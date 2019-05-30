@@ -8,11 +8,11 @@ import './buttonDemo/buttom_sheet_demo.dart';
 import './buttonDemo/snack_bar_demo.dart';
 import './buttonDemo/expansion_panel_demo.dart';
 import './buttonDemo/chip_demo.dart';
-import './table/data_table_demo.dart';
-import './table/paginated_data_table_demo.dart';
-import './table/card_demo.dart';
-import './table/stepper_demo.dart';
-import './state/state_management_demo.dart';
+import 'demo/state/state_management_demo.dart';
+import 'demo/table/card_demo.dart';
+import 'demo/table/data_table_demo.dart';
+import 'demo/table/paginated_data_table_demo.dart';
+import 'demo/table/stepper_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override

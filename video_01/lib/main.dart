@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_01/stream/stream_demo.dart';
+import 'package:video_01/demo/stream/stream_demo.dart';
 // import 'model/post.dart';  // 导入了没有使用的dart 也会报错
 import './demo/MODrawer.dart'; 
 import './demo/MOListView.dart';
@@ -11,7 +11,9 @@ import './demo/MOSliver.dart';
 import './demo/MONavigator.dart';
 import './demo/form_demo.dart';
 import './material_components.dart';
-import './state/state_management_demo.dart';
+import 'demo/bloc/block_demo.dart';
+import 'demo/rxdart/rxdart_demo.dart';
+import 'demo/state/state_management_demo.dart';
 
 void main() => runApp(App());
 
@@ -21,7 +23,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/stream',
+      initialRoute: '/bloc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -29,6 +31,8 @@ class App extends StatelessWidget {
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
         '/stream': (context) => StreamDemo(),
+        '/rxdart': (context) => RxDartDemo(),
+        '/bloc' : (context) => BlocDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
