@@ -34,7 +34,7 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
       .listen((data) => print(data));
     // _textFieldSubject.close();
 
-    // Observable<String> _observable = 
+    // Observable<String> _observable =
       // Observable(Stream.fromIterable(['hello', '您好']));   // 两个回调
       // Observable.fromFuture(Future.value('hello ~'));
       // Observable.fromIterable(['hello', '您好']); // 两个回调
@@ -44,31 +44,31 @@ class _RxDartDemoHomeState extends State<RxDartDemoHome> {
     // _observable.listen(print);
     // PublishSubject<String> _subject = PublishSubject<String>(); // listen之前add的数据没有回调
     // BehaviorSubject<String> _subject = BehaviorSubject<String>(); // listen之前add的数据有回调
-    ReplaySubject<String> _subject = ReplaySubject<String>(maxSize: 2); 
+    ReplaySubject<String> _subject = ReplaySubject<String>(maxSize: 2);
 
     // _subject.listen((data) => print('listen 1:$data'));
     // _subject.add('hello');
-    // _subject.listen((data) => print('listen 2:${data.toUpperCase()}')); 
+    // _subject.listen((data) => print('listen 2:${data.toUpperCase()}'));
     // _subject.add('hola');
-    // listen 1:hello                                                 
-    // listen 2:HELLO                                                 
-    // listen 2:HOLA                                                  
-    // listen 1:hola  
+    // listen 1:hello
+    // listen 2:HELLO
+    // listen 2:HOLA
+    // listen 1:hola
 
     _subject.add('hello');
     _subject.add('hola');
     _subject.add('hi');
     _subject.listen((data) => print('listen 1:$data'));
-    _subject.listen((data) => print('listen 2:${data.toUpperCase()}')); 
+    _subject.listen((data) => print('listen 2:${data.toUpperCase()}'));
     // BehaviorSubject
     // listen 1:hola
-    // listen 2:HOLA 
+    // listen 2:HOLA
 
     // ReplaySubject
-    // listen 1:hello 
-    // listen 2:HELLO 
+    // listen 1:hello
+    // listen 2:HELLO
     // listen 1:hola
-    // listen 2:HOLA 
+    // listen 2:HOLA
     _subject.close();
   }
 
