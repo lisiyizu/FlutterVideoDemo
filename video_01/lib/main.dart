@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_01/demo/http/http_demo.dart';
 import 'package:video_01/demo/stream/stream_demo.dart';
 // import 'model/post.dart';  // 导入了没有使用的dart 也会报错
 import './demo/MODrawer.dart'; 
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/bloc',
+      initialRoute: '/http',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -33,6 +34,7 @@ class App extends StatelessWidget {
         '/stream': (context) => StreamDemo(),
         '/rxdart': (context) => RxDartDemo(),
         '/bloc' : (context) => BlocDemo(),
+        '/http' : (context) => HttpDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
