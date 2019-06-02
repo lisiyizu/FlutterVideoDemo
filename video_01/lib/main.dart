@@ -12,6 +12,7 @@ import './demo/MOSliver.dart';
 import './demo/MONavigator.dart';
 import './demo/form_demo.dart';
 import './material_components.dart';
+import 'demo/animation/animation_demo.dart';
 import 'demo/bloc/block_demo.dart';
 import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/state/state_management_demo.dart';
@@ -24,7 +25,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -35,6 +36,7 @@ class App extends StatelessWidget {
         '/rxdart': (context) => RxDartDemo(),
         '/bloc' : (context) => BlocDemo(),
         '/http' : (context) => HttpDemo(),
+        '/animation' : (context) => AnimationDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
