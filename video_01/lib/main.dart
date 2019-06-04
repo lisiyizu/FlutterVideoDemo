@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_01/demo/http/http_demo.dart';
+import 'package:video_01/demo/i18n/i18n_demo.dart';
 import 'package:video_01/demo/stream/stream_demo.dart';
 // import 'model/post.dart';  // 导入了没有使用的dart 也会报错
 import './demo/MODrawer.dart'; 
@@ -14,8 +15,11 @@ import './demo/form_demo.dart';
 import './material_components.dart';
 import 'demo/animation/animation_demo.dart';
 import 'demo/bloc/block_demo.dart';
+import 'demo/i18n/intl/mo_demo_localizations.dart';
 import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/state/state_management_demo.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'package:video_01/demo/i18n/map/mo_demo_localizations.dart';
 
 void main() => runApp(App());
 
@@ -23,9 +27,23 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('en', 'US'),
+      // locale: Locale('zh', 'CN'),
+      // localeResolutionCallback: (Locale locale, Iterable<Locale> supportedLocale) {
+      //   return Locale('en', 'US');
+      // },
+      localizationsDelegates: [
+        MODemoLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -37,6 +55,7 @@ class App extends StatelessWidget {
         '/bloc' : (context) => BlocDemo(),
         '/http' : (context) => HttpDemo(),
         '/animation' : (context) => AnimationDemo(),
+        '/i18n' : (context) => I18nDemo(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple, // 主题色
