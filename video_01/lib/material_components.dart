@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_01/demo/MOSlider.dart';
 import './buttonDemo/button_demo.dart';
 import './buttonDemo/floating_action_button.dart';
 import './buttonDemo/popup_menu_button.dart';
@@ -24,6 +25,7 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'SliderDemo', page: MOSlider()),
           ListItem(title: 'StateManagemnetDemo', page: StateManagementDemo()),
           ListItem(title: 'StepperDemo', page: StepperDemo()),
           ListItem(title: 'CardDemo', page: CardDemo()),

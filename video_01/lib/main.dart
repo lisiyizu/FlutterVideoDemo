@@ -43,7 +43,7 @@ class App extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,  // 隐藏右上角debug标签
       // home: MONavigator(),
-      initialRoute: '/i18n',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
