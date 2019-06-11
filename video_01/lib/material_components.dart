@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:video_01/demo/MOCheckboxDemo.dart';
+import 'package:video_01/demo/MODate.dart';
+import 'package:video_01/demo/MOForm.dart';
+import 'package:video_01/demo/MORadio.dart';
 import 'package:video_01/demo/MOSlider.dart';
+import 'package:video_01/demo/MOSwitch.dart';
 import './buttonDemo/button_demo.dart';
 import './buttonDemo/floating_action_button.dart';
 import './buttonDemo/popup_menu_button.dart';
@@ -25,6 +30,7 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'DateDemo', page: DateTimeDemo()),
           ListItem(title: 'SliderDemo', page: MOSlider()),
           ListItem(title: 'StateManagemnetDemo', page: StateManagementDemo()),
           ListItem(title: 'StepperDemo', page: StepperDemo()),
@@ -37,6 +43,10 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'ButtomSheetDemo', page: BottomSheetDemo()),
           ListItem(title: 'AlertDialogDemo', page: AlertDialogDemo()),
           ListItem(title: 'SimpleDialogDemo', page: SimpleDialogDemo()),
+          ListItem(title: 'SwitchDemo', page: SwitchDemo()),
+          ListItem(title: 'RadioDemo', page: RadioDemo()),
+          ListItem(title: 'CheckboxDemo', page: CheckboxDemo()),
+          ListItem(title: 'FromDemo', page: FormDemo()),
           ListItem(title: 'PopupMenuButton', page: PopupMenuButtonDemo()),
           ListItem(title: 'Button', page: ButtonDemo()),
           ListItem(title: 'FloatingActionButton', page: FloatingActionButtonDemo()),
