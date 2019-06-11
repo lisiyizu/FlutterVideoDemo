@@ -30,7 +30,7 @@ class _TestDemeHomeState extends State<TestDemeHome> {
         ),
         ActionChip(
           key: Key('actionChip'),
-          label: Text('$count'),
+          label: Text('$count', key: Key('actionChipLabelText')),
           onPressed: () {
             setState(() {
               count++;

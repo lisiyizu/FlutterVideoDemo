@@ -42,6 +42,7 @@ class _CardDemoState extends State<CardDemo> {
                     subtitle: Text(post.author),
                   ),
                   Container(
+                    // height: 55,
                     padding: EdgeInsets.all(16.0),
                     child: Text(post.description, maxLines: 2, overflow: TextOverflow.ellipsis),
                   ),

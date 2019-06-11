@@ -8,7 +8,6 @@ void main() {
     final actionChip = find.byValueKey('actionChip');
     final actionChipLabelText = find.byValueKey('actionChipLabelText');
 
-
     setUpAll(() async {
       driver = await FlutterDriver.connect();
     });
